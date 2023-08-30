@@ -15,7 +15,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"tamasfe.even-better-toml",
+				"tamasfe.even-better-toml"
 			]
 		}
 	}

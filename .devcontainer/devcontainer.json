@@ -8,8 +8,15 @@
 		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
 		"ghcr.io/devcontainers-contrib/features/pylint:2": {},
 		"ghcr.io/devcontainers-contrib/features/ruff:1": {},
-		"ghcr.io/eitsupi/devcontainer-features/duckdb-cli:1": {}
+		"ghcr.io/eitsupi/devcontainer-features/duckdb-cli:1": {},
+		"ghcr.io/devcontainers-contrib/features/black:2": {}
 	},
-	"postCreateCommand": "poetry install && pre-commit install"
-	// "customizations": {},
+	"postCreateCommand": "poetry install && pre-commit install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"tamasfe.even-better-toml",
+			]
+		}
+	}
 }

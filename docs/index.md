@@ -5,12 +5,12 @@ Fall 2023
 
 Instructor:
 Ty Schlichenmeyer
-t.schlic@wustl.edu
+<t.schlic@wustl.edu>
 
 TAs:
-Siming Yin, siming@wustl.edu
-Levi Kaster, k.levi@wustl.edu
-Lavinia Xu, lavinia.x@wustl.edu
+Siming Yin, <siming@wustl.edu>
+Levi Kaster, <k.levi@wustl.edu>
+Lavinia Xu, <lavinia.x@wustl.edu>
 
 Office Hours
 Professor (virtual): Fridays 12PM
@@ -21,7 +21,7 @@ TAs: TBD
 
 _At the base of data science, data needs to be acquired, integrated and preprocessed. This important step in the data science workflow ensures both quantity and quality of data and improves the effectiveness of the following steps of data processing. Students will gain an understanding of concepts and approaches of data acquisition and governance including data shaping, information extraction, information integration, data reduction and compression, data transformation as well as data cleaning. The course will further highlight the ethical responsibility of protecting the integrity of data and proper use of data._
 
-### Prerequisites:
+### Prerequisites
 
 - CSE 131: Introduction to Computer Science
 - CSE 217A: Introduction to Data Science
@@ -111,7 +111,6 @@ It will not be announced before class if there will be an in-class exercise assi
 
 Students with _excused absences_ will be able to submit the exercise on their own before midnight the same day or a time agreed upon with the instructor. For group participation days, excused absences should be made up with work agreed on by your teammates. Clearance for excused absences must be obtained from the instructor via email before the class period.
 
-
 ## Class Structure
 
 On most days, class will begin with 30-45 minutes of lecture. The remaining class time will be spent working on in-class exercises related to the material. You will work on the exercises in randomly assigned pairs.
@@ -132,17 +131,16 @@ To accommodate COVID isolation procedures and other considerations, lectures wil
 
 The following University Policies and resources are detailed on our course website:
 
-- Preferred Name and Personal Pronouns - https://wustl-data.github.io/syllabus/pronouns
-- COVID-19 Health and Safety Protocol - https://wustl-data.github.io/syllabus/covid
-- Disability & Religious Accommodations - https://wustl-data.github.io/syllabus/disability-religious
-- Other resources - https://wustl-data.github.io/syllabus/resources
-
+- Preferred Name and Personal Pronouns - <https://wustl-data.github.io/syllabus/pronouns>
+- COVID-19 Health and Safety Protocol - <https://wustl-data.github.io/syllabus/covid>
+- Disability & Religious Accommodations - <https://wustl-data.github.io/syllabus/disability-religious>
+- Other resources - <https://wustl-data.github.io/syllabus/resources>
 
 ## Course Schedule
 
 The course schedule is provided below and is _subject to change throughout the semester_. The most up to date version may usually be found on the course website.
 
-> Note: While the course registration page lists a final exam date, we will not be having a final exam. The final project will be due on this day instead.
+While the course registration page lists a final exam date, we will not be having a final exam. The final project will be due on this day instead.
 
 > Note: This version of the course schedule is a copy from last semester and will be updated the first week of class to reflect changes.
 

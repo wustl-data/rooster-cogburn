@@ -23,6 +23,34 @@ files = [
 ]
 
 [[package]]
+name = "markdown"
+version = "3.4.4"
+description = "Python implementation of John Gruber's Markdown."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "Markdown-3.4.4-py3-none-any.whl", hash = "sha256:a4c1b65c0957b4bd9e7d86ddc7b3c9868fb9670660f6f99f6d1bca8954d5a941"},
+    {file = "Markdown-3.4.4.tar.gz", hash = "sha256:225c6123522495d4119a90b3a3ba31a1e87a70369e03f14799ea9c0d7183a3d6"},
+]
+
+[package.extras]
+docs = ["mdx-gh-links (>=0.2)", "mkdocs (>=1.0)", "mkdocs-nature (>=0.4)"]
+testing = ["coverage", "pyyaml"]
+
+[[package]]
+name = "markdown-captions"
+version = "2.1.2"
+description = "Turn markdown images into captioned images using <figure>"
+optional = false
+python-versions = "*"
+files = [
+    {file = "markdown-captions-2.1.2.tar.gz", hash = "sha256:1c3ec0b674dd41a4c5f125724188c32a17bd46fd527db29f0c55a001e2d7abaf"},
+]
+
+[package.dependencies]
+Markdown = ">=3.0.1"
+
+[[package]]
 name = "packaging"
 version = "23.1"
 description = "Core utilities for Python packages"
@@ -71,4 +99,4 @@ testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "no
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f91a8bb858da2fd62d220b45a81c50a4e618853e71d5b56fc4f9bcc86ee99c43"
+content-hash = "762f7b001c4c0c2c76b4517852752dd3de56ab51bb59329081510687f0edc53e"

@@ -24,8 +24,7 @@
 				"GitHub.copilot",
 				"charliermarsh.ruff",
 				"ms-toolsai.jupyter",
-				"ms-python.black-formatter",
-				"ms-pyright.pyright"
+				"ms-python.black-formatter"
 			],
 			"settings": {
 				"yaml.schemas": {
@@ -43,7 +42,8 @@
 				],
 				"python.testing.unittestEnabled": false,
 				"python.testing.pytestEnabled": true,
-				"python.defaultInterpreterPath": ".venv/bin/python"
+				"python.defaultInterpreterPath": ".venv/bin/python",
+				"files.insertFinalNewline": true
 			}
 		}
 	}

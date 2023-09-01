@@ -11,8 +11,6 @@ A common pattern that teams use when collaborating on code on GitHub is to have 
 
 Unfortunately, we can't use a basic *fork* setup because we need each student to have a private repo only visible to them and the instructor for academic integrity, but GitHub forces all forks to have the same permissions as the original repository, meaning anyone with a fork can view anyone else's fork. Thus, we need to work around this limitation by setting up a modified version of a fork using some tailored, slightly more complicated manual steps.
 
-If this is your first time ever being exposed to git or version control, check out our [git glossary](glossary) for some basic context.
-
 The specific git commands we perform to set up our architecture were borrowed from answers in [this Stack Overflow thread](https://stackoverflow.com/a/30352360/1526293), adapted to fit our classroom situation.
 
 Here are the main requirements of our git/repository setup:
@@ -42,7 +40,7 @@ The next two sections are outlined as follows:
 
 !!! info "Vocab check"
 
-    Git-speak can take some getting used to, so don't fret. Check out the Git [Glossary](glossary) I've compiled for your reference.
+    Git-speak can take some getting used to, so don't fret. Check out the Git [Glossary](glossary.md) I've compiled for your reference.
 
 ## Visual Representations
 

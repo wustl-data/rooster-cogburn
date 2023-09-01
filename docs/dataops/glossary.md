@@ -54,4 +54,4 @@ A repository is a collection of files and their commit history. Repositories are
 
 ### Fetch vs pull
 
-`git fetch` downloads changes from a remote repository, but does not merge them into your active branch right away. It stores the updates from the remote locally in special remote branches that you can see with `git branch -r`. `git pull` is simply a shortcut for a `git fetch` followed by a `git merge` -- see [Pulling Updates](dev_env/pulling_updates).
+`git fetch` downloads changes from a remote repository, but does not merge them into your active branch right away. It stores the updates from the remote locally in special remote branches that you can see with `git branch -r`. `git pull` is simply a shortcut for a `git fetch` followed by a `git merge`.

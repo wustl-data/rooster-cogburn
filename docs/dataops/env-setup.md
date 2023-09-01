@@ -11,7 +11,7 @@ Follow these instructions to set up and test your development environment:
     1. Clone the template repo
 
     ```bash
-    git clone --bare https://github.com/wustl-data/sp23-assignments
+    git clone --bare https://github.com/wustl-data/fl23
     ```
 
     ```mermaid
@@ -22,7 +22,7 @@ Follow these instructions to set up and test your development environment:
     2.  Move your _current directory_ to the cloned repo's folder
 
     ```bash
-    cd sp23-assignments
+    cd fl23
     ```
 
     3.  Push a version of the repo to your private repo
@@ -33,7 +33,7 @@ Follow these instructions to set up and test your development environment:
 
     ```mermaid
     flowchart LR
-    template([sp23-assignments])--> local([Your Local Repo])
+    template([fl23])--> local([Your Local Repo])
     local-->|push| origin([Your Private GH Repo])
     ```
 
@@ -46,7 +46,7 @@ Follow these instructions to set up and test your development environment:
     5.  Delete your local version of the template repo
 
     ```bash
-    rm -rf sp23-assignments
+    rm -rf fl23
     ```
     ```mermaid
     flowchart LR

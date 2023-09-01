@@ -3,7 +3,6 @@
 Follow these instructions to set up and test your development environment:
 
 1. Make sure you have access to the [GitHub Organization](https://github.com/wustl-data/).
-    - [Link](https://classroom.github.com/a/90hPlshI) to sample GitHub Classroom assignment. (We will not use GitHub Classroom for assignments, but this provides an easy way for me to add you to the organization.)
 2. Create a private repo named as your WUSTL username in the `wustl-data` GitHub Organization using the GitHub UI.
     - Don't add a README or .gitignore through the UI, these are provided by the template repo.
 3. Make sure you can view the _upstream_ version of the [course repository](https://github.com/wustl-data/fl23)

@@ -52,11 +52,14 @@ Follow these instructions to set up and test your development environment:
         origin([Your Private GH Repo])
         ```
 
-5. Open a Codespace and make sure it loads quickly!
+5. Choose whether to work on the cloud in a Codespaces environment or on your local machine and follow the appropriate instructions for the rest of this exercise. Here are some considerations:
+    - Cloud (Codespaces): No manual setup needed -- just click "open a codespace" on whichever branch you have open in GitHub. Codespaces are free for the class. You can keep your work preserved and easily access your environment on different machines, and you can have multiple instances of your environment running at once. However, you will need to be connected to the internet to work on your code. Generally, GitHub's servers are fast enough to frequently outperform personal computers for computation.
 
-    - Or, to work on your local machine, clone the repo, open it in VS Code, then Ctrl+Shift+P -> "Reopen in container". This may take a minute to download the container image.
+    - Local Dev Container: Takes some manual configuration and interfacing with Docker to get set up. Provides the comfort of a stable and accessible home for your code on your machine.
 
-6. Then run `git switch -t upstream/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw3` to create a new branch named `hw3` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw3` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
+    - Manual setup: Requires you to manually install all the dependencies on your local machine. This is the most flexible option, but it is also the most time consuming and error prone.
+
+6. Then run `git switch -t origin/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw3` to create a new branch named `hw3` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw3` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
 
 7. Run the following commands in the terminal to test your setup:
 

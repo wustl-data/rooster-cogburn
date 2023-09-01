@@ -9,54 +9,54 @@ Follow these instructions to set up and test your development environment:
 4. Populate your private repo with the code from the upstream repository as follows:
     1. Clone the template repo
 
-    ```bash
-    git clone --bare https://github.com/wustl-data/fl23
-    ```
+        ```bash
+        git clone --bare https://github.com/wustl-data/fl23
+        ```
 
-    ```mermaid
-    flowchart LR
-       template([sp23-assignments]) -->|clone| local([Your Local Repo])
-    ```
+        ```mermaid
+        flowchart LR
+        template([fl23]) -->|clone| local([Your Local Repo])
+        ```
 
     2.  Move your _current directory_ to the cloned repo's folder
 
-    ```bash
-    cd fl23
-    ```
+        ```bash
+        cd fl23.git
+        ```
 
     3.  Push a version of the repo to your private repo
 
-    ```bash
-    git push --mirror https://github.com/wustl-data/<your wustl username>
-    ```
+        ```bash
+        git push --mirror https://github.com/wustl-data/<your wustl username>
+        ```
 
-    ```mermaid
-    flowchart LR
-    template([fl23])--> local([Your Local Repo])
-    local-->|push| origin([Your Private GH Repo])
-    ```
+        ```mermaid
+        flowchart LR
+        template([fl23])--> local([Your Local Repo])
+        local-->|push| origin([Your Private GH Repo])
+        ```
 
     4.  Go back to your original working directory
 
-    ```bash
-    cd ..
-    ```
+        ```bash
+        cd ..
+        ```
 
     5.  Delete your local version of the template repo
 
-    ```bash
-    rm -rf fl23
-    ```
-    ```mermaid
-    flowchart LR
-    origin([Your Private GH Repo])
-    ```
+        ```bash
+        rm -rf fl23
+        ```
+        ```mermaid
+        flowchart LR
+        origin([Your Private GH Repo])
+        ```
 
 5. Open a Codespace and make sure it loads quickly!
 
     - Or, to work on your local machine, clone the repo, open it in VS Code, then Ctrl+Shift+P -> "Reopen in container". This may take a minute to download the container image.
 
-6. Run `git fetch` to make sure you have the latest version of the upstream repo. Then run `git switch -t upstream/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw3` to create a new branch named `hw3` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw3` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
+6. Then run `git switch -t upstream/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw3` to create a new branch named `hw3` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw3` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
 
 7. Run the following commands in the terminal to test your setup:
 

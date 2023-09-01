@@ -8,13 +8,17 @@ Ty Schlichenmeyer
 <t.schlic@wustl.edu>
 
 TAs:
-Siming Yin, <siming@wustl.edu>
-Levi Kaster, <k.levi@wustl.edu>
-Lavinia Xu, <lavinia.x@wustl.edu>
 
-Office Hours
+- Siming Yin, <siming@wustl.edu>
+- Levi Kaster, <k.levi@wustl.edu>
+- Lavinia Xu, <lavinia.x@wustl.edu>
+
+## Office Hours
+
 Professor (virtual): Fridays 12PM
+
 Zoom link posted on Canvas
+
 TAs: TBD
 
 ## Department Course Description

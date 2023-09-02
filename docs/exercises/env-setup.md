@@ -75,15 +75,11 @@ Here are some considerations:
 
 - Manual setup: Requires you to manually install all the dependencies on your local machine. This is the most flexible option, but it is also the most time consuming and error prone.
 
-## Clone your private repo
+## Clone and open your private repo
 
 === "Codespaces"
 
     1. Go to your private repo on GitHub and click the green "Code" button. Select "Open with Codespaces" from the dropdown menu. This will open VS Code with all of the necessary dependencies installed in the environment.
-    2. Run `git branch -a` to list all of your remote and local branches. `remotes/origin/hw0-upstream` should be listed.
-    3. Create a local version of the `hw0-upstram` branch and switch to it.
-
-        Run `git switch -t origin/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw3` to create a new branch named `hw3` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw3` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
 
 === "Local Dev Container"
 
@@ -98,6 +94,13 @@ Here are some considerations:
 
         === "WSL"
             `cd` to the repo directory and run `code .` to open the repo in VS Code.
+
+## Switch to the `hw0-upstream` branch and create a `hw3` branch
+
+1. Run `git branch -a` to list all of your remote and local branches. `remotes/origin/hw0-upstream` should be listed.
+2. Create a local version of the `hw0-upstram` branch and switch to it.
+
+    Run `git switch -t origin/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw3` to create a new branch named `hw3` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw3` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
 
 ## Test your assignment
 
@@ -122,7 +125,9 @@ Here are some considerations:
     poetry add pandas
     ```
 
-Run `pytest` again to see if your test output is any different from before.
+3. Run `pytest` again to see if your test output is any different from before.
+
+## Commit and push your changes
 
 Use git commands to stage (`git add`) and commit (`git commit`) your changes. Use `git status` to see what files have been changed and what files are staged for commit, use `git log` to see the commit history, and use `git diff` to see the changes you've made since your last commit.
 

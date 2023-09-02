@@ -103,7 +103,7 @@ Rubrics for each of these submissions will be provided, and will include peer ev
 
 #### Late Submission Policy
 
-Incomplete or unfinished work may be resubmitted up to **two full weeks** after the deadline for 50% credit _in addition to any credit earned before the deadline_.
+Incomplete or unfinished assignments or progress reports may be resubmitted up to **two full weeks** after the deadline for 50% credit _in addition to any credit earned before the deadline_.
 
 ### **Class Participation**: 10%
 

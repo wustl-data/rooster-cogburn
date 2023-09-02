@@ -24,7 +24,7 @@ Follow these instructions to set up and test your development environment:
         cd fl23.git
         ```
 
-    3.  Push a version of the repo to your private repo
+    3.  Push a version of the repo to your private repo, replacing `<your wustl username>` with your actual WUSTL username.
 
         ```bash
         git push --mirror https://github.com/wustl-data/<your wustl username>
@@ -45,8 +45,9 @@ Follow these instructions to set up and test your development environment:
     5.  Delete your local version of the template repo
 
         ```bash
-        rm -rf fl23
+        rm -rf fl23.git
         ```
+
         ```mermaid
         flowchart LR
         origin([Your Private GH Repo])

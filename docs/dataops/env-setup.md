@@ -63,24 +63,24 @@ Follow these instructions to set up and test your development environment:
 
 7. Run the following commands in the terminal to test your setup:
 
-```bash
-pytest
-```
+    ```bash
+    pytest
+    ```
 
-This should show a failing test
+    This should show a failing test
 
-```
-pre-commit run --all-files
+    ```
+    pre-commit run --all-files
 
-```
+    ```
 
-This should run our _pre-commit hooks_ which will help provide you with code feedback before you commit your code. If you need to, get your code to pass the checks before continuing.
+    This should run our _pre-commit hooks_ which will help provide you with code feedback before you commit your code. If you need to, get your code to pass the checks before continuing.
 
 8. Add pandas to your project's dependencies.
 
-```bash
-poetry add pandas
-```
+    ```bash
+    poetry add pandas
+    ```
 
 Run `pytest` again to see if your test output is any different from before.
 

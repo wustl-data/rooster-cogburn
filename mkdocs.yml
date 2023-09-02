@@ -1,9 +1,12 @@
 site_name: My Docs
 theme:
   name: material
-  logo: fontawesome/solid/hat-cowboy
+  icon:
+    logo: fontawesome/solid/hat-cowboy
   features:
   - content.code.copy
+  palette:
+    primary: teal
 markdown_extensions:
   - attr_list
   - admonition

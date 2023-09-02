@@ -1,4 +1,4 @@
-# Data Manipulation and Management - FL23
+# Syllabus
 
 Jubel 120
 

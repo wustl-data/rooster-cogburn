@@ -1,11 +1,12 @@
-# Data Manipulation and Management
+# Data Manipulation and Management - FL23
 
-5:30-6:50 PM – Jubel 120
-Fall 2023
+Jubel 120
+
+5:30 PM - 6:50 PM
 
 Instructor:
-Ty Schlichenmeyer
-<t.schlic@wustl.edu>
+
+- Ty Schlichenmeyer, <t.schlic@wustl.edu>
 
 TAs:
 

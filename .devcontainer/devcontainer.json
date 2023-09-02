@@ -48,6 +48,15 @@
 				"files.insertFinalNewline": true,
 				"python.editor.defaultFormatter": "ms-python.black-formatter"
 			}
+		},
+		"codespaces": {
+			"repositories": {
+				"wustl-data/fl23": {
+					"permissions": {
+						"contents": "read"
+					}
+				}
+			}
 		}
 	}
 }

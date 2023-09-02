@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: CSE314A - Data Manipulation and Management
 theme:
   name: material
   icon:
@@ -10,14 +10,14 @@ theme:
       primary: teal
       scheme: default
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: Switch to dark mode
 
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: teal
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: Switch to light mode
 
 markdown_extensions:

@@ -26,7 +26,8 @@
 				"GitHub.copilot",
 				"charliermarsh.ruff",
 				"ms-toolsai.jupyter",
-				"ms-python.black-formatter"
+				"ms-python.black-formatter",
+				"yzhang.markdown-all-in-one"
 			],
 			"settings": {
 				"yaml.schemas": {

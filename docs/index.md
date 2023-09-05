@@ -149,32 +149,37 @@ While the course registration page lists a final exam date, we will not be havin
 
 > Note: This version of the course schedule is a copy from last semester and will be updated the first week of class to reflect changes.
 
-| Week | Day | Date   | Topic                                 | Assignment | Lecture | Project Stage |
-| ---- | --- | ------ | ------------------------------------- | ---------- | ------- | ------------- |
-| 1    | Tu  |  | Course Overview and Syllabus          |            | 1       |               |
-|      | Th  |  | Data transformation basics            |            | 2       | 1             |
-| 2    | Tu  |  | Python and Pandas                     |            | 3       | 1             |
-|      | Th  |   | Data engineering basics               |            | 4       | 1             |
-| 3    | Tu  |   | Group Collaboration Day               |            |         | 1             |
-|      | Th  |   | Fetching data from web APIs           | 1          | 5       | 1             |
-| 4    | Tu  |  | Web crawling basics                   |            | 6       | 1             |
-|      | Th  |  | Deep data cleaning                    |            | 7       | 1             |
-| 5    | Tu  |  | Data normalization                    | 2          | 8       | 1             |
-|      | Th  |  | Group Collaboration                   |            |         | 1             |
-| 6    | Tu  |  | ETL and Data Warehousing              |            | 9       | 2             |
-|      | Th  |   | The dbt framework                     | 3          | 10      | 2             |
-| 7    | Tu  |   | Test-Driven Data                      |            | 11      | 2             |
-|      | Th  |   | Great Expectations                    | 4          | 12      | 2             |
-| 9    | Tu  |  | Group Collaboration                   |            |         | 2             |
-|      | Th  |  | Data Orchestration and large datasets |            | 13      | 2             |
-| 10   | Tu  |  | Basics of SQL, NoSQL, and GraphQL     | 5          | 14      | 2             |
-|      | Th  |  | Database Migrations & SQL Tuning      |            | 15      | 2             |
-| 11   | Tu  |   | Group Collaboration                   |            |         | 2             |
-|      | Th  |   | Generating Plots and Docs             | 6          | 16      | 3             |
-| 12   | Tu  |  | Data Dashboards                       |            | 17      | 3             |
-|      | Th  |  | Geospatial Data                       |            | 18      | 3             |
-| 13   | Tu  |  | Multidimensional and time-series data |           | 19      | 3             |
-|      | Th  |  | Group Collaboration                   |            |         | 3             |
-| 14   | Tu  |  | Group Presentations                   |            |         |               |
-|      | Th  |  | Group Presentations                   |            |         |               |
-|      | Tu  |   | Final Project Due                     |            |         |               |
+| Week | Day | Date  | Topic                                  | Assignment Due    | Progress Report Due |
+|------|-----|-------|----------------------------------------|-------------------|---------------------|
+| 1    | Tu  | 8/29  | Course Overview and Syllabus           |                   |                     |
+|      | Th  | 8/31  | DataOps and Development Environment    |                   |                     |
+| 2    | Tu  | 9/5   | Test-Driven Data                       |                   |                     |
+|      | Th  | 9/7   | Querying Tabular Data (SQL/Pandas)     |                   |                     |
+| 3    | Tu  | 9/12  | Group Collaboration                    |                   |                     |
+|      | Th  | 9/14  | Intro to Data Visualization            | HW1: Fri 11:59 PM |                     |
+| 4    | Tu  | 9/19  | Tidy/Normalized Data                   |                   |                     |
+|      | Th  | 9/21  | Multi-Dimensional and Time-Series Data |                   |                     |
+| 5    | Tu  | 9/26  | Group Collaboration                    |                   |                     |
+|      | Th  | 9/28  | Web APIs & Web Scraping                |                   | PR 1: Fri 5 PM      |
+| 6    | Tu  | 10/3  | Cleaning Text Data                     |                   |                     |
+|      | Th  | 10/5  | ETL/ELT                                | HW2: Fri 11:59 PM |                     |
+| 7    | Tu  | 10/10 | Fall Break                             |                   |                     |
+|      | Th  | 10/12 | Data Transformation and dbt            |                   |                     |
+| 8    | Tu  | 10/17 | Group Collaboration                    |                   |                     |
+|      | Th  | 10/19 | Data Warehouse Design                  | HW3: Fri 11:59 PM |                     |
+| 9    | Tu  | 10/24 | OLTP vs OLAP                           |                   |                     |
+|      | Th  | 10/26 | Query Tuning and Optimization          |                   |                     |
+| 10   | Tu  | 10/31 | Group Collaboration                    |                   |                     |
+|      | Th  | 11/2  | SQL Indexing                           |                   | PR 2: Fri 5 PM      |
+| 11   | Tu  | 11/7  | Data at Scale                          |                   |                     |
+|      | Th  | 11/9  | Interactive Data Dashboards            | HW4: Fri 11:59 PM |                     |
+| 12   | Tu  | 11/14 | Evolutionary Database Design           |                   |                     |
+|      | Th  | 11/16 | Database Security & Governance         |                   |                     |
+| 13   | Tu  | 11/21 | Group Collaboration                    | HW5: Tue 5:00 PM  |                     |
+|      | Th  | 11/23 | Thanksgiving Break                     |                   |                     |
+| 14   | Tu  | 11/28 | Continuous Integration & Deployment    |                   |                     |
+|      | Th  | 11/30 | Group Collaboration                    |                   | PR 3: Fri 5 PM      |
+| 15   | Tu  | 12/5  | Group Presentations                    |                   |                     |
+|      | Th  | 12/7  | Group Presentations                    |                   |                     |
+| 16   | We  | 12/13 |                                        | HW6: Wed 11:59 PM |                     |
+| 17   | Tu  | 12/19 | Final Project Due 11:59 PM             |                   |                     |

@@ -132,6 +132,15 @@ Here are some considerations:
 Use git commands to stage (`git add`) and commit (`git commit`) your changes. Use `git status` to see what files have been changed and what files are staged for commit, use `git log` to see the commit history, and use `git diff` to see the changes you've made since your last commit.
 
 
-9. Complete the example assigment by implementing a function that returns a blank dataframe. If you're not sure how to proceed, try deducing next steps from your test output. Add, commit, and push your changes to your private repo.
+9. Complete the example assigment by implementing a function that returns a blank dataframe. If you're not sure how to proceed, try deducing next steps from your test output. Add, commit, and push (`git push`) your changes  to your private repo.
 
-10. Check your repo on GitHub. Go to the "Actions" tag and make sure the checks are passing. If they are, you are done with the exercise!
+!!! tip "Git GUI"
+
+    Although it's good to know how to use git from the command line, you may find it easier to use a GUI. VS Code has a built-in git GUI, and GitHub Desktop can be a helpful interface for non-WSL users.
+
+10. Check your repo on GitHub. Go to the "Actions" tag and make sure the checks are passing!
+
+## Improve your test
+
+1. Modify the test provided to check for a filter condition.
+2. Commit and push your changes to your private repo.

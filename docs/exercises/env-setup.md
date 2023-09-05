@@ -144,3 +144,5 @@ Use git commands to stage (`git add`) and commit (`git commit`) your changes. Us
 
 1. Modify the test provided to check for a filter condition.
 2. Commit and push your changes to your private repo.
+
+The workflow run in your Actions tab on GitHub should be **red**. We will turn this test green with the exercise on Thursday.

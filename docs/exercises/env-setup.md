@@ -95,7 +95,7 @@ Here are some considerations:
         === "WSL"
             `cd` to the repo directory and run `code .` to open the repo in VS Code.
 
-## Switch to the `hw0-upstream` branch and create a `hw3` branch
+## Switch to the `hw0-upstream` branch and create a `hw0` branch
 
 1. Run `git branch -a` to list all of your remote and local branches. `remotes/origin/hw0-upstream` should be listed.
 2. Create a local version of the `hw0-upstram` branch and switch to it.

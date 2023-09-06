@@ -9,7 +9,7 @@ For a more in-depth explanation of git concepts, *Atlassian*'s [git guides](http
 
 Terms are grouped by topic below.
 
-## The Big Ones
+## General
 
 ### Version Control System (VCS)
 
@@ -90,6 +90,8 @@ Here are a few example scenarios that might help illustrate how the process of s
 
 The command `git branch <branch-name>` creates a new branch in your repository, branching off of your currently active branch.
 
+The command `git switch <branch-name>` switches your active branch to `<branch-name>`. At this point, any commits you make will be added to the end of the branch you switched to.
+
 ```mermaid
 
 gitGraph:
@@ -101,10 +103,11 @@ gitGraph:
 
 ```
 
-A branch can be thought of as an alternate pathway of changes to your codebase. When a branch is "checked out", all commits get added to the end of that branch. When you switch branches, your IDE or whatever program is reading code from the repo will completely switch the active files (i.e., the one that shows up in your filesystem or code editor) to the version of the files in the latest commit of branch you switched to, while hiding the code in the non-active branches within the git filesystem. The state of the (committed) files in the branch you switched from will be saved, and you can pull them back up again by switching back to the branch.
+A branch can be thought of as an alternate pathway of changes to your codebase. When you switch branches, your IDE or whatever program is reading code from the repo will completely switch the active files (i.e., the one that shows up in your filesystem or code editor) to the version of the files in the latest commit of branch you switched to, while hiding the code in the non-active branches within the git filesystem. The state of the (committed) files in the branch you switched from will be saved, and you can pull them back up again by switching back to the branch.
 
-The modern way to switch branches is by using the `git switch` command, but you'll see `git checkout` used most places.
+!!! Tip "git switch vs git checkout"
 
+    Most tutorials on the internet use the command `git checkout` to switch branches. However, `git checkout` is a flexible command that can be used to do things besides switching branches, such as integrating a specific file from a different branch into your current branch. The command `git switch` is a newer command that is more explicit about its purpose, and we will use this command for class.
 
 ### HEAD
 

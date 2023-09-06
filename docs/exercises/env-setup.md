@@ -159,7 +159,7 @@ Review the page on our [git strategy](../background/dataops/3-git-strategy.md) i
 
         ![Example Terminal Prompt](../assets/images/terminalprompt.png)
 
-## Create a module and implement the function to pass your test
+## Commit changes to `pyproject.toml` and `poetry.lock`
 
 ??? tip "Orient Yourself"
 
@@ -184,7 +184,13 @@ Review the page on our [git strategy](../background/dataops/3-git-strategy.md) i
 
         For example: say you specify "any version greater than 1.0" for a package e.g. Pandas. However, there is a separate package (say, Plotly), that requires "any version less than 2.0" of Pandas. Poetry will resolve this conflict by installing the latest version of Pandas that satisfies both requirements. By including a `poetry.lock` file in our repository, we can make sure that everyone is using the same versions of the packages we are using. Additionally, it helps us save time when we're installing the packages because Poetry doesn't need to take the extra time to perform the dependency resolution; it just uses what's in `poetry.lock` when you run `poetry install`.
 
-9. Complete the example assigment by implementing a function that returns a blank dataframe. First, make sure you understand Python's import structure, referring to the tip below if necessary. Once you understand how imports and functions work, and you're still not sure how to proceed, try deducing next steps from your test output. Once the test is passing, stage your changes and attempt a commit.
+## Make the test pass
+
+9. Make the test pass by implementing a function that returns a blank dataframe. First, make sure you understand Python's import structure, referring to the tip below if necessary. Once you understand how imports and functions work, and you're still not sure how to proceed, try deducing next steps from your test output. Once the test is passing, stage your changes and attempt a commit.
+
+??? tip "Python modules & imports"
+
+    A Python _module_ is essentially a `*.py` file that you can import into your code. Examine the test in `tests/test_devenv.py` to see how we import the module of the function that is being tested. When we call the function, we use dot notation, i.e. `<module>.<function>()` to call the function. There are various ways to import modules and functions depending on your *namespacing* needs, but understanding this simple import is a good place to start.
 
 
 10. Check the output of your pre-commit hooks (if you don't know what you're looking for, you skipped a step above!). If any of the pre-commit hooks failed, your commit failed. Most likely, the pre-commit hooks failed due to a formatting error, and it's possible that the formatter automatically adjusted some of your code to pass the formatter. Run `git status` to see if any files were changed by the formatter, and which ones were changed if so. Inspect the diff if you want to, then add and re-commit the formatting changes. Usually it makes sense to re-use your previous commit message, since the commit command failed to actually perform the commit.

@@ -147,7 +147,6 @@ The course schedule is provided below and is _subject to change throughout the s
 
 While the course registration page lists a final exam date, we will not be having a final exam. The final project will be due on this day instead.
 
-> Note: This version of the course schedule is a copy from last semester and will be updated the first week of class to reflect changes.
 
 | Week | Day | Date  | Topic                                  | Assignment Due    | Progress Report Due |
 |------|-----|-------|----------------------------------------|-------------------|---------------------|

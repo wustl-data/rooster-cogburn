@@ -116,13 +116,13 @@ Here are some considerations:
 
 ## Create `hw-0` branch
 
-Now, run `git switch -c hw0` to create a new branch named `hw0` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw0` to push the branch to your origin (private) repo. Similarly to `git switch`'s `-t` flag, `git push`'s `-u`/`--upstream` flag sets the tracking branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
+Now, run `git switch -c hw0` to create a new branch named `hw0` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw0` to push the branch to your origin (private) repo. Similarly to `git switch`'s `-t` flag, `git push`'s `-u`/`--set-upstream` flag sets the tracking branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
 
 Review the page on our [git strategy](../background/dataops/3-git-strategy.md) if you need a refresher on why we keep hw0-upstream and hw0 branches separate.
 
 ??? Warning "Upstream?"
 
-    Even though the the `-u` flag in `git push -u origin hw0` stands for `upstream` (the full flag is `--set-upstream`), it is not the same concept of _upstream_ as when we refer to our `upstream` repo (The course `fl23` "template" repo) and its `hw*-upstream` branches. The branch linked with the `-u` flag should be more accurately referred to as the `remote tracking branch`. In a future exercise, we will explicitly add the `fl23` repo as a _remote_ to our local repo, and we will name it `upstream`.
+    Even though the the `-u` flag in `git push -u origin hw0` stands for `upstream` (the verbose version of the flag is `--set-upstream`), it is not the same concept of _upstream_ as when we refer to our `upstream` repo (The course `fl23` "template" repo) and its `hw*-upstream` branches. The branch linked with the `-u` flag should be more accurately referred to as the `remote tracking branch`. In a future exercise, we will explicitly add the `fl23` repo as a _remote_ to our local repo, and we will name it `upstream`.
 
 ## Test your assignment
 
@@ -184,9 +184,19 @@ Review the page on our [git strategy](../background/dataops/3-git-strategy.md) i
 
         For example: say you specify "any version greater than 1.0" for a package e.g. Pandas. However, there is a separate package (say, Plotly), that requires "any version less than 2.0" of Pandas. Poetry will resolve this conflict by installing the latest version of Pandas that satisfies both requirements. By including a `poetry.lock` file in our repository, we can make sure that everyone is using the same versions of the packages we are using. Additionally, it helps us save time when we're installing the packages because Poetry doesn't need to take the extra time to perform the dependency resolution; it just uses what's in `poetry.lock` when you run `poetry install`.
 
-9. Complete the example assigment by implementing a function that returns a blank dataframe. First, make sure you understand Python's import structure, referring to the tip below if necessary. Once you understand how imports and functions work, and you're still not sure how to proceed, try deducing next steps from your test output. Once the test is passing, stage, commit, and push (`git push`) your changes to your private repo.
+9. Complete the example assigment by implementing a function that returns a blank dataframe. First, make sure you understand Python's import structure, referring to the tip below if necessary. Once you understand how imports and functions work, and you're still not sure how to proceed, try deducing next steps from your test output. Once the test is passing, stage your changes and attempt a commit.
 
-10. Check your repo on GitHub. Go to the "Actions" tag and make sure the checks are passing (green)!
+
+10. Check the output of your pre-commit hooks (if you don't know what you're looking for, you skipped a step above!). If any of the pre-commit hooks failed, your commit failed. Most likely, the pre-commit hooks failed due to a formatting error, and it's possible that the formatter automatically adjusted some of your code to pass the formatter. Run `git status` to see if any files were changed by the formatter, and which ones were changed if so. Inspect the diff if you want to, then add and re-commit the formatting changes. Usually it makes sense to re-use your previous commit message, since the commit command failed to actually perform the commit.
+
+    !!! info "pre-commit hooks"
+
+        Pre-commit hooks are defined in `.pre-commit-config.yaml`. For more information on pre-commit, see [pre-commit.com](https://pre-commit.com/).
+
+
+11. If your pre-commit checks pass and your committ succeeds, push your changes to your private repo (`git push`).
+
+12. Open your repo on GitHub. Go to the "Actions" tab and make sure the "autograder" check is passing (green)!
 
 ## Add a test
 
@@ -195,4 +205,4 @@ Review the page on our [git strategy](../background/dataops/3-git-strategy.md) i
 1. Add a test in `tests/test_devenv.py` to check for a filter condition, similar to our in-class demo.
 2. Commit and push your changes to your private repo.
 
-The workflow run in your Actions tab on GitHub should be **red**. We will turn this test green with the exercise on Thursday.
+The autograder run in your Actions tab on GitHub should now be **red**. We will turn this test green with the exercise on Thursday.

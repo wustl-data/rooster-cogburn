@@ -100,7 +100,7 @@ Here are some considerations:
 1. Run `git branch -a` to list all of your remote and local branches. `remotes/origin/hw0-upstream` should be listed.
 2. Create a local version of the `hw0-upstram` branch and switch to it.
 
-    Run `git switch -t origin/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw3` to create a new branch named `hw3` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw3` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
+    Run `git switch -t origin/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw0` to create a new branch named `hw0` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw0` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
 
 ## Test your assignment
 

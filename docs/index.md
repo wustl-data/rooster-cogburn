@@ -114,7 +114,7 @@ It will not be announced before class if there will be an in-class exercise assi
 
 #### Excused Absences
 
-Students with _excused absences_ will be able to submit the exercise on their own before midnight the same day or a time agreed upon with the instructor. For group participation days, excused absences should be made up with work agreed on by your teammates. Clearance for excused absences must be obtained from the instructor via email before the class period.
+Students with _excused absences_ will be able to submit the exercise on their own before the start of the next class period for participation credit. By default, the in-class exercises are due at midnight the same day of class, although for some exercises, partial submissions will qualify for credit (such instances will be announced as such during class). For group participation days, excused absences should be made up with work agreed on by your teammates. Clearance for excused absences must be obtained from the instructor via email before the class period.
 
 ## Class Structure
 

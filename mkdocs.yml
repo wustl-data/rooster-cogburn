@@ -6,6 +6,7 @@ theme:
   features:
   - content.code.copy
   - content.tabs.link
+  - content.code.annotate
   palette:
     - media: "(prefers-color-scheme: light)"
       primary: teal

@@ -3,27 +3,108 @@ title: Git Glossary
 sidebar_position: 5
 ---
 
-All the git-speak can be confusing and intimidating at first. Here is a hopefully helpful cheat sheet of some of most of the important terms.
+Git concepts, terminology, and commands can be confusing and intimidating at first. Here is a hopefully helpful reference glossary of some of most of the important terms.
 
-For a more in-depth explanation of git concepts, *Atlassian*'s [git guides](https://www.atlassian.com/git/tutorials/what-is-version-control) are excellent resources. They have a [cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) as well that's a little more concise and pragmatic than the one I've put together here.
+For a more in-depth explanation of git concepts, *Atlassian*'s [git guides](https://www.atlassian.com/git/tutorials/what-is-version-control) are excellent resources, including a [cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) for common commands.
+
+Terms are grouped by topic below.
+
+## The Big Ones
+
+### Version Control System (VCS)
+
+A system/syntax for tracking changes to a codebase over time. Git is a VCS. The main alternatives to git are Subversion (SVN) and Mercurial (Hg).
 
 ### Git
 
-Git is a **version control system** that tracks and organizes changes in a codebase mainly via its system of commits and branches.
+Git is a _version control system_ that tracks and organizes changes in a codebase mainly via its system of commits and branches.
 
 ### GitHub
 
 An online service that hosts git repositories.
 
-### Branches
+### Directed Acyclic Graph (DAG)
 
-The command `git branch <branch-name>` creates a new branch in your repository. A branch can be thought of as an alternate pathway of changes to your codebase, splitting off from the commit where you created the branch. When a branch is "checked out", all commits get added to the end of that branch. When you switch branches, your IDE or whatever program is reading code from the repo will completely switch the active files to the files in the branch you switched to. The state of the (committed) files in the branch you switched from will be saved, and you can pull them back up again by switching back to the branch.
+In a git repo, commits are organized via a directed acyclic graph (DAG) that conveys the commit history.
 
-The modern way to switch branches is by using the `git switch` command, but you'll see `git checkout` used most places.
+- A _directed graph_ is a collection of nodes and edges, where each edge has a direction. In a git repo, the nodes are commits, and the edges convey a parent-to-child relationship.
+
+- An _acyclic graph_ is a directed graph that does not contain any cycles. A _cycle_ is a path of edges that starts and ends at the same node. In a git repo, a cycle would represent a commit that is a successor of itself, which is impossible.
+
+## Core Git Concepts
 
 ### Commits
 
-A commit is a snapshot of the state of your codebase at a given point in time. Commits are made by running the command `git commit -m "commit message"`. The commit message is a short description of the changes you made in the commit so that others can review the changes you made in your code. Commits are organized via a directed acyclic graph (DAG) that conveys the *commit history*. The commit history is a record of all the changes made to the codebase, and is the primary way to track changes in a codebase.
+A _commit_ is a snapshot of the state of your codebase at a given point in time. Commits are made by running the command `git commit -m "commit message"`, which forms a new snapshot that is labeled as the successor to the previous commit:
+
+```mermaid
+
+gitGraph:
+    commit
+    commit
+
+```
+
+Use `git log` to view the commit history of your repository.
+
+#### SHA
+A unique identifier (SHA) is generated and assigned to each commit.
+
+#### Commit messages
+
+The commit message is a short description of the changes you made in the commit so that others can review the changes you made in your code.
+
+##### Conventional Commits
+
+**Conventional commits** are commits that feature commit messages that follow this specific format:
+
+```
+commit-type(qualifier): commit message
+```
+
+Where `commit-type` is one of: `feat` (feature), `fix`, `docs`, `style`, `refactor`, `perf` (performance), `test`, `build`, `ci`, `chore`, or `revert`.
+
+The `(qualifier)` portion of the message is optional, and can be any string that helps to further describe the commit. The `commit message` portion is simply the body of your commit message as usual.
+
+The `feat` and `fix` commit types are special because they can convey the information needed to apply [semantic versioning]() to a project's git history.
+
+The rest of the commit types are helpful reminders and guardrails for the types of changes and the scope of changes that should be self-contained a commit.
+
+Read more at [conventionalcommits.org](https://www.conventionalcommits.org/).
+
+#### Staging with `git add`
+
+The command `git add <file-name-or-pattern>` adds a file or set of files to the _staging area_. The _staging area_ may be thought of as a holding place for files that are ready to commit (and will be committed if a commit is performed).
+
+Beginners with git might struggle to see the value in the `add` command and the staging area, because it's often convienent to "forget" to add a file to the staging area until we are ready to commit all of our changes. However, efficient use of the staging area can go a long way towards helping you maintain a clean commit history.
+
+The primary thing to keep in mind is that commits should be scoped to the smallest self-contained changes possible, so that our git history is reviewable and useful. When you commit, you should be thinking about how easy it should be to trace changes through the commit tree. However, adding to the staging area takes a little less commitment... no pun intended 🙂
+
+Here are a few example scenarios that might help illustrate how the process of staging files can be helpful:
+
+- You are working on a large feature that requires changes to many files. You finish working on some files before others. Staging your "ready-to-go" files lets you better focus on the unstaged changes still in progress in your working tree, especially when using `git diff` and other operations where you are reviewing your changes.
+- You are working on a file and want to preserve the state of the file as a "checkpoint," but you don't want to commit the changes because it would commit would occur while the repo in a broken state. By staging a partial change, any subsequent changes to the file will be tracked separately from the staged changes, and you can easily revert to the staged changes if you need to.
+- You perform some work on your code, but you realize that the work is better split up logically into two commits rather than one. You can add and commit the first set of changes first, and then add and commit the second set of changes separately.
+
+### Branches
+
+The command `git branch <branch-name>` creates a new branch in your repository, branching off of your currently active branch.
+
+```mermaid
+
+gitGraph:
+    commit
+    commit
+    branch new-branch
+    checkout new-branch
+    commit
+
+```
+
+A branch can be thought of as an alternate pathway of changes to your codebase. When a branch is "checked out", all commits get added to the end of that branch. When you switch branches, your IDE or whatever program is reading code from the repo will completely switch the active files (i.e., the one that shows up in your filesystem or code editor) to the version of the files in the latest commit of branch you switched to, while hiding the code in the non-active branches within the git filesystem. The state of the (committed) files in the branch you switched from will be saved, and you can pull them back up again by switching back to the branch.
+
+The modern way to switch branches is by using the `git switch` command, but you'll see `git checkout` used most places.
+
 
 ### HEAD
 
@@ -33,12 +114,7 @@ HEAD is fancy name for a "pointer" that labels the latest commit on the branch t
 
 There are three types of resets: `--soft`, `--hard`, and `--mixed` (the default). Generally, a reset moves your HEAD pointer to a different commit, modifying the commit history to an earlier commit. The various types of resets apply these changes to the staging area and working tree as well. If you find yourself needing to perform a reset and needing to understand the difference between the options, check out this intro from [Atlassian](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset).
 
-### `git add` and the staging tree
 
-The command `git add <file-name>` adds a file to the staging area. The staging area is a temporary holding place for files that you want to commit. People new and experienced with Git alike might struggle to see the value in the `add` process and the staging area, because it's often convienent to "forget" to add a file to the staging area until we are ready to commit all of our changes. Remember that commits are for sharing with others, and we want them to contain changes that logically go together. The staging tree provides an intermediate area where files that are "ready to commit" can be stored. Some common examples when this is useful:
-
-- We're working on a large commit and finish working on some files before others. Staging our "ready-to-go" files lets us better focus on the unstaged changes still in progress in our working tree, especially when using `git diff` and other operations where we are reviewing our changes.
-- We have changes from multiple unrelated tasks in our working tree. We can stage the changes for each task separately, and commit them separately. This makes it easier to break the commits up into logical chunks without needing to resort to some more complicated options like stashing or branching.
 
 ### Repositories, remotes, cloning, and origin
 

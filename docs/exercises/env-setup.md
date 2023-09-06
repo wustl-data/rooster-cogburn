@@ -103,6 +103,8 @@ Here are some considerations:
         === "WSL"
             `cd` to the repo directory and run `code .` to open the repo in VS Code.
 
+    4. When VS Code opens, it should prompt you to open the folder in a Dev Container. Accept the prompt and wait for the container to build. This may take a few minutes the first time. If you miss the prompt, you can open the command palette (Ctrl+Shift+P) and search for "Reopen in Container".
+
 ## Switch to the `hw0-upstream` branch and create a `hw0` branch
 
 1. Run `git branch -a` to list all of your remote and local branches. `remotes/origin/hw0-upstream` should be listed.

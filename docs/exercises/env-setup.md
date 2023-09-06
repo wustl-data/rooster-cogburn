@@ -134,9 +134,9 @@ Use git commands to stage (`git add`) and commit (`git commit`) your changes. Us
 
 9. Complete the example assigment by implementing a function that returns a blank dataframe. If you're not sure how to proceed, try deducing next steps from your test output. Add, commit, and push (`git push`) your changes  to your private repo.
 
-!!! tip "Git GUI"
+    !!! tip "Git GUI"
 
-    Although it's good to know how to use git from the command line, you may find it easier to use a GUI. VS Code has a built-in git GUI, and GitHub Desktop can be a helpful interface for non-WSL users.
+        Although it's good to know how to use git from the command line, you may find it easier to use a GUI. VS Code has a built-in git GUI, and GitHub Desktop can be a helpful interface for non-WSL users.
 
 10. Check your repo on GitHub. Go to the "Actions" tag and make sure the checks are passing!
 

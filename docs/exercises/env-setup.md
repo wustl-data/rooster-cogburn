@@ -13,7 +13,7 @@ Follow these instructions to set up and test your development environment:
 ## Template (upstream) repo --> personal repo
 
 
-!!! warning "Windows Users"
+??? warning "Windows Users"
 
     A large number third party software libraries, including libraries that are commonly used in this course, assume UNIX-style terminal commands. MacOS and Linux terminals are considered UNIX terminals, but Powershell on Windows is not. As a minor example, if you are using Windows, commands in this documentation like `cd` (change directory) and `rm -rf` (remove all folder contents) might not work.
 
@@ -83,11 +83,15 @@ Here are some considerations:
 
 - **Manual setup**: Requires you to manually install all the dependencies on your local machine. This is the most flexible option, but it is also the most time consuming and error prone.
 
-## Clone and open your private repo
+## Clone and open your private repo (hw0-upstream branch)
 
 === "Codespaces"
 
-    1. Go to your private repo on GitHub and click the green "Code" button. Select "Open with Codespaces" from the dropdown menu. This will open VS Code with all of the necessary dependencies installed in the environment.
+    1. Go to your private repo on GitHub.
+    2. Codespaces will build the environment from your currently selected branch, so select the `hw0-upstream ` branch in your branch selection dropdown menu.
+    3. Click the green "Code" button and open a Codespace from the branch. Ideally your Codespace does not take too long to load but may require some time to load when a Codespace is first created. (This load time will be much shorter when you re-open this codespace; the build step only happens for new containers.) After the Codespace is created, an in-browser version of VS Code will open to your project directory with all of the necessary dependencies installed in the environment.
+
+    > Note: Previous versions of the codespace instructions did not specify switching branches before creating a codespace. Generally, it's ok to switch branches after creating a codespace, but creating a codespace directly from a branch is the most sure-fire way to ensure that the Codespace is loaded as intended.
 
 === "Local Dev Container"
 
@@ -105,12 +109,20 @@ Here are some considerations:
 
     4. When VS Code opens, it should prompt you to open the folder in a Dev Container. Accept the prompt and wait for the container to build. This may take a few minutes the first time. If you miss the prompt, you can open the command palette (Ctrl+Shift+P) and search for "Reopen in Container".
 
-## Switch to the `hw0-upstream` branch and create a `hw0` branch
+    5. Switch to the `hw0-upstream` branch and create a `hw0` branch
 
-1. Run `git branch -a` to list all of your remote and local branches. `remotes/origin/hw0-upstream` should be listed.
-2. Create a local version of the `hw0-upstram` branch and switch to it.
+        1. Run `git branch -a` to list all of your remote and local branches. `remotes/origin/hw0-upstream` should be listed.
+        2. Create a local version of the `hw0-upstream` branch and switch to it by running `git switch -t origin/hw0-upstream` to create and switch to the contents of the upstream branch. The `-t` flag sets the version of the branch in your `origin` repository as the tracking branch for your local branch. This means that when you run `git pull` or `git push` without specifying a branch, git will know which branch to pull from or push to, and the remote tracking branch is also the version of the branch that your local version is compared to when you run `git status`.
 
-    Run `git switch -t origin/hw0-upstream` to create and switch to the contents of the upstream branch. Now, run `git switch -c hw0` to create a new branch named `hw0` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw0` to push the branch to your origin (private) repo. The `-u` flag sets the upstream branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
+## Create `hw-0` branch
+
+Now, run `git switch -c hw0` to create a new branch named `hw0` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw0` to push the branch to your origin (private) repo. Similarly to `git switch`'s `-t` flag, `git push`'s `-u`/`--upstream` flag sets the tracking branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
+
+Review the page on our [git strategy](../background/dataops/3-git-strategy.md) if you need a refresher on why we keep hw0-upstream and hw0 branches separate.
+
+??? Warning "Upstream?"
+
+    Even though the the `-u` flag in `git push -u origin hw0` stands for `upstream` (the full flag is `--set-upstream`), it is not the same concept of _upstream_ as when we refer to our `upstream` repo (The course `fl23` "template" repo) and its `hw*-upstream` branches. The branch linked with the `-u` flag should be more accurately referred to as the `remote tracking branch`. In a future exercise, we will explicitly add the `fl23` repo as a _remote_ to our local repo, and we will name it `upstream`.
 
 ## Test your assignment
 
@@ -135,9 +147,9 @@ Here are some considerations:
     poetry add pandas
     ```
 
-3. Run `pytest` again to see if your test output is any different from before. If you are still getting ModuleNotFound errors, check out the tip below.
+3. Run `pytest` again to see if your test output is any different from before. If you are still getting `ModuleNotFound` errors, check out the tip below.
 
-    !!! tip "Virtual Environments with Poetry"
+    ??? tip "Virtual Environments with Poetry"
 
         Poetry does a few different things, but one of its jobs is to manage *virtual environments*. Generally speaking, virtual environments define a specific version of python as well as any package dependencies that are installed for a project. If you want to see what a *virtual environment* looks like under the hood, open the `.venv` folder in the root of your project and poke around. You'll see some important binary files (`bin` folder), some third party libraries (`lib` folder), and some metadata (`pyvenv.cfg` file).
 
@@ -147,22 +159,40 @@ Here are some considerations:
 
         ![Example Terminal Prompt](../assets/images/terminalprompt.png)
 
-## Commit and push your changes
+## Create a module and implement the function to pass your test
 
-Use git commands to stage (`git add`) and commit (`git commit`) your changes. Use `git status` to see what files have been changed and what files are staged for commit, use `git log` to see the commit history, and use `git diff` to see the changes you've made since your last commit.
+??? tip "Orient Yourself"
 
+    The key to getting more comfortable with git, poetry, etc is to know what to do when you get stuck or don't know where to go next. Here are some helpful commands that you should run **very frequently** before and after performing operations on your git gree or virtual environment. This should help you gain an intuition on what these operations are doing.
 
-9. Complete the example assigment by implementing a function that returns a blank dataframe. If you're not sure how to proceed, try deducing next steps from your test output. Add, commit, and push (`git push`) your changes  to your private repo.
+    - **git status**: Tells you what files have been changed since your last commit, what files are staged for commit, and what files are untracked. If your branch is attached to a remote tracking branch, it will also tell you if your local branch is ahead or behind the remote branch.
+    - **git log**: Shows you the commit history for your current branch.
+    - **git diff**: Shows you the changes you've made since your last commit. Generally, I find it more convenient to use the GUI for this.
+    - **git branch**: Shows you what branches exist in your local repo and which one you are currently on. The `-a` flag will show you all branches, including remote branches.
+    - **poetry show**: Shows you what packages are installed in your virtual environment.
+    - **poetry env info**: Shows you information about your virtual environment, including the location of the virtual environment on your machine.
+    - **poetry env list**: Shows you all of the virtual environments that poetry knows about on your machine.
 
-    !!! tip "Git GUI"
+    Also likely to help is the usage of a GUI for git operations. While comfort with the command line is a valuable career skill, helpful for programming efficiency, and a marker of [technical sophistication](https://www.learnenough.com/command-line-tutorial#aside-technical_sophistication), using GUI tools can help you focus on concepts instead of command-line syntax. Here are some options:
+    - VS Code's built in Git GUI is okay for staging, committing, and pushing code, but you can get a much clearer picture of your git tree using the GitLens extension for VS code, which will be installed by default in our Dev Containers in all future versions. Non-WSL users might also like using GitHub Desktop to manage their git repos; this is one of the few cases where I've been unable to cleanly install a software tool with WSL, but hopefully they will add support for it soon.
 
-        Although it's good to know how to use git from the command line, you may find it easier to use a GUI. VS Code has a built-in git GUI, and GitHub Desktop can be a helpful interface for non-WSL users.
+1. Use git commands to stage (`git add`) and commit (`git commit`) your changes to `pyproject.toml` and `poetry.lock`. For some brief notes on what these commands are doing, see the [git glossary](../background/dataops/4-glossary.md).
 
-10. Check your repo on GitHub. Go to the "Actions" tag and make sure the checks are passing!
+    ??? info "pyproject.toml & poetry.lock"
 
-## Improve your test
+        `pyproject.toml` is a configuration file for Poetry. It defines the project's dependencies, build instructions, and other metadata for various tools. Importantly, it's designed to be human readable and lets you define an "acceptable" range of package verions you might require for your project. `poetry.lock` is a bit different; it's a "machine-readable" file that defines the exact versions of the packages according to the way that Poetry _resolved_ the dependencies.
 
-1. Modify the test provided to check for a filter condition.
+        For example: say you specify "any version greater than 1.0" for a package e.g. Pandas. However, there is a separate package (say, Plotly), that requires "any version less than 2.0" of Pandas. Poetry will resolve this conflict by installing the latest version of Pandas that satisfies both requirements. By including a `poetry.lock` file in our repository, we can make sure that everyone is using the same versions of the packages we are using. Additionally, it helps us save time when we're installing the packages because Poetry doesn't need to take the extra time to perform the dependency resolution; it just uses what's in `poetry.lock` when you run `poetry install`.
+
+9. Complete the example assigment by implementing a function that returns a blank dataframe. First, make sure you understand Python's import structure, referring to the tip below if necessary. Once you understand how imports and functions work, and you're still not sure how to proceed, try deducing next steps from your test output. Once the test is passing, stage, commit, and push (`git push`) your changes to your private repo.
+
+10. Check your repo on GitHub. Go to the "Actions" tag and make sure the checks are passing (green)!
+
+## Add a test
+
+> Note: The previous version of this exercise asked you to rewrite the existing test: submissions that did already did this will still be accepted, but I think that making it a separate test makes things clearer for this exercise.
+
+1. Add a test in `tests/test_devenv.py` to check for a filter condition, similar to our in-class demo.
 2. Commit and push your changes to your private repo.
 
 The workflow run in your Actions tab on GitHub should be **red**. We will turn this test green with the exercise on Thursday.

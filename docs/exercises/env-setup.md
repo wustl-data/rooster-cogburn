@@ -79,9 +79,9 @@ Here are some considerations:
 
 - **Cloud (Codespaces)**: No manual setup needed -- You can launch a codespace from any code branch within the GitHub UI. By default, VS Code opens in the browser, but you can open the code in your desktop version at any time through menu options. Codespaces are free for the class. You can keep your work preserved and easily access your environment on different machines, even across different branches of code, and you can have multiple instances of your environment running at once. However, you will need to be connected to the internet to work on your code. Frequently, GitHub's servers are fast enough to outperform personal computers for computation.
 
-- Local Dev Container: Takes some manual configuration and interfacing with Docker to get set up. Provides the comfort of a stable and accessible home for your code on your machine.
+- **Local Dev Container**: Takes some manual configuration and interfacing with Docker to get set up. Provides the comfort of a stable and accessible home for your code on your machine.
 
-- Manual setup: Requires you to manually install all the dependencies on your local machine. This is the most flexible option, but it is also the most time consuming and error prone.
+- **Manual setup**: Requires you to manually install all the dependencies on your local machine. This is the most flexible option, but it is also the most time consuming and error prone.
 
 ## Clone and open your private repo
 

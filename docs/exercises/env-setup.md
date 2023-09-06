@@ -8,12 +8,20 @@ Follow these instructions to set up and test your development environment:
 
 2. Create a repository for your homework submissions by clicking the green "New" button under *Repositories*. Name your repository with your WUSTL username. Select **private** visibility so other students may not see your submissions. Don't add a README, .gitignore, or license file through the UI: these are provided by the class template repo.
 
+3. Make sure you have [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md) installed. Follow the instructions for your operating system. OSX users should make sure they have [Homebrew](https://brew.sh/) installed, and Windows users should make sure to follow the WSL addendum in the instructions if you are using WSL/Ubuntu.
+
 ## Template (upstream) repo --> personal repo
 
 
 !!! warning "Windows Users"
 
-    If you are using Windows, commands like `cd` (change directory) and `rm -rf` (remove all folder contents) might not work in Powershell or the Windows Command Line. Windows users are advised to install the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/setup/environment) for their main terminal, following the documentation for integrating Visual Studio Code, git, and Docker. If this causes you trouble, git bash is an acceptable short-term solution for this exercise. Finally, if you are stuck using Powershell or cmd, you can tailor these instructions to perform the appropriate filesystem commands (cd, rm, etc.) as necessary.
+    A large number third party software libraries, including libraries that are commonly used in this course, assume UNIX-style terminal commands. MacOS and Linux terminals are considered UNIX terminals, but Powershell on Windows is not. As a minor example, if you are using Windows, commands in this documentation like `cd` (change directory) and `rm -rf` (remove all folder contents) might not work.
+
+    Historically, this has often been worked around by either *emulating* a UNIX terminal with a program such as _Git Bash_, or by installing/dual-booting a full Linux/Ubuntu OS alongside your Windows OS.
+
+    However, Windows has recently made it extremely easy to run a fully-featured Linux OS from the Windows Terminal via **Windows Subsystem for Linux (WSL)**.
+
+    Windows users, especially if you think you will be working with local dev containers instead of Codespaces (see considerations [below](#codespaces-cloud-or-local-dev-container)), are **strongly advised** to install the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/setup/environment) for their main terminal, following the documentation for integrating Visual Studio Code, git, and Docker. If this is undesirable for you, you may need to troubleshoot your own installation methods.
 
 1. Populate your private repo with the code from the upstream repository by executing the following commands in your terminal.
 

@@ -98,7 +98,7 @@ Here are some considerations:
     3. Open the repo in VS Code.
 
         === "OSX"
-            Use the GUI to open the folder containing the repo you just cloned.
+            Use the VS Code GUI to open the folder containing the repo you just cloned.
 
         === "WSL"
             `cd` to the repo directory and run `code .` to open the repo in VS Code.
@@ -135,7 +135,17 @@ Here are some considerations:
     poetry add pandas
     ```
 
-3. Run `pytest` again to see if your test output is any different from before.
+3. Run `pytest` again to see if your test output is any different from before. If you are still getting ModuleNotFound errors, check out the tip below.
+
+    !!! tip "Virtual Environments with Poetry"
+
+        Poetry does a few different things, but one of its jobs is to manage *virtual environments*. Generally speaking, virtual environments define a specific version of python as well as any package dependencies that are installed for a project. If you want to see what a *virtual environment* looks like under the hood, open the `.venv` folder in the root of your project and poke around. You'll see some important binary files (`bin` folder), some third party libraries (`lib` folder), and some metadata (`pyvenv.cfg` file).
+
+        By keeping these folders separated on your machine for each project, we can switch back and forth between various projects (or versions of a project) and their dependencies without worrying about conflicts or the need to reinstall or uninstall packages for compatibility.
+
+        Almost always, you can tell if a virtual environment is active by looking at your terminal prompt. If you see something like `(fl23-py3.11)` at the beginning of your prompt, the project's virtual environment is active! If you don't see that, you can activate one by running `poetry shell` from the root of your project. We'll learn more about other Poetry commands as we go along.
+
+        ![Example Terminal Prompt](../assets/images/terminalprompt.png)
 
 ## Commit and push your changes
 

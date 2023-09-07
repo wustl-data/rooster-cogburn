@@ -12,3 +12,7 @@ repos:
     rev: v1.1.325
     hooks:
     -   id: pyright
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.0.287
+    hooks:
+        - id: ruff

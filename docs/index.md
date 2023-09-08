@@ -23,7 +23,7 @@ Zoom link posted on Canvas
 TAs:
   - Lavinia: Mondays 2:30-3:30 PM
   - Siming: Tuesdays 2:30-3:30 PM
-  - Levi: Wednesdays 4-5:30 PM
+  - Levi: Wednesdays 4-5 PM
 
 Locations coming soon
 

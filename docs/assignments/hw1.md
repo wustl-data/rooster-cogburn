@@ -5,7 +5,7 @@
 In this assignment, you will benchmark some common data queries using both SQL and Pandas using a TDD approach.
 
 
-**For the autograder, you must create a git *tag* for each question that labels the commit which represents your solution. For the tag name, use the format 1.x where x is the question number.**
+**For the autograder, you must create a git *tag* for each question that labels the commit which represents your solution. For the tag name, use the format 1.x.y where x is the question number and y is the attempt number. The auto grader will choose the highest grade from the tags that match this format**
 
 !!! info "Grading your unit tests"
 

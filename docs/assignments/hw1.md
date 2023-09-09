@@ -40,6 +40,6 @@ We will use the [Faker](https://faker.readthedocs.io/en/master/) library to gene
 
 8. Implement this function using the [_faker_ library](https://faker.readthedocs.io/en/master/).🟢
 
-9. Write a test for a function `query_runtime` that uses `generate_people` to profile the query performance runtime of your functions as a function of n. The output of `query_runtime`should fit the data schema for the input of the provided `benchmark` function 🔴.
+~9. Write a test for a function `query_runtime` that uses `generate_people` to profile the query performance runtime of your functions as a function of n. The output of `query_runtime`should fit the data schema for the input of the provided `benchmark` function 🔴.~
 
 10. Implement this function and observe the results from the provided `benchmark` function.

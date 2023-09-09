@@ -6,19 +6,26 @@ on:
 permissions:
   contents: write
 jobs:
-  deploy:
-    name: Deploy docs
+  build:
     runs-on: ubuntu-latest
-
     steps:
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v2.0.0
 
-      - name: Checkout main
-        uses: actions/checkout@v2
+  # Deploy job
+  deploy:
+    needs: build
 
-      - name: Install mkdocs plugins
-        run: pip install markdown-captions mkdocstrings[python] mkdocs-nav-weight
+    permissions:
+      pages: write
+      id-token: write
 
-      - name:
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

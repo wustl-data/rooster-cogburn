@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docs
-        run: pip install mkdocs && mkdocs build
+        run: pip install mkdocs mkdocs-material markdown-captions mkdocstrings[python] mkdocs-nav-weight && mkdocs build
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v2.0.0

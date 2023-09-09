@@ -5,7 +5,7 @@
 In this assignment, you will benchmark some common data queries using both SQL and Pandas using a TDD approach.
 
 
-**For the autograder, you must create a git *tag* for each question that labels the commit which represents your solution. For the tag name, use the format 1.x where x is the question number.**
+**For the autograder, you must create a git *tag* for each question that labels the commit which represents your solution. For the tag name, use the format 1.x.y where x is the question number and y is the attempt number. The auto grader will choose the highest grade from the tags that match this format**
 
 !!! info "Grading your unit tests"
 
@@ -15,6 +15,9 @@ In this assignment, you will benchmark some common data queries using both SQL a
     2. Your function will then be tested against a different battery of tests that is not provided to you. Your grade for the tests you write will be determined by how many of these secret tests you pass. **You may only submit code in a passing 🟢 state once per cycle.** Then, the autograder must receive another 🔴 commit before you may continue. If you receive the same test failure twice in a row from the autograder, or if you fail more test cases than in your previous submission (this is called a *regression*), the autograder will be turned off until the submission deadline for that question. Thus, you still may receive full credit after the deadline but will not have the benefit of the autograder's feedback.
 
 🟢 and 🔴 circles indicate the status of the checks you need for credit for each question.
+
+Each question is worth 10 points each.
+
 ## Basic Unit Tests and Queries
 
 1. Examine the provided test in `tests/test_hw1.py` and its Pandas implementation `filter_after_cutoff_age` that filters your generated dataset to include people who are 18 or older. Refactor the query to use SQL instead.🟢

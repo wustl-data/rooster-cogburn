@@ -27,7 +27,8 @@
 				"ms-toolsai.jupyter",
 				"ms-python.black-formatter",
 				"yzhang.markdown-all-in-one",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"github.vscode-github-actions"
 			],
 			"settings": {
 				"yaml.schemas": {

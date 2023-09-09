@@ -6,16 +6,17 @@ on:
 permissions:
   contents: write
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-
-
   deploy:
+    name: Deploy docs
     runs-on: ubuntu-latest
 
     steps:
-      uses: mhausenblas/mkdocs-deploy-gh-pages@master
+
+      - name: Checkout main
+        uses: actions/checkout@v2
+
+      - name:
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EXTRA_PACKAGES: markdown-captions mkdocstrings[python] mkdocs-nav-weight

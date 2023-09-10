@@ -2,9 +2,8 @@ name: Publish Dev Container Image
 
 on:
   push:
-    branches: ["main"]
     paths:
-      - ".devcontainer/**"
+      - .github/.devcontainer/**
 
 jobs:
   build-and-push-image:

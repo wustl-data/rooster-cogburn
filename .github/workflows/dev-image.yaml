@@ -36,3 +36,8 @@ jobs:
           mkdir -p $HOME/bin
           export PATH=$PATH:$HOME/bin
           mv container-structure-test-linux-amd64 $HOME/bin/container-structure-test
+
+      - name: Test Poetry installation
+        run: |
+          container-structure-test test --image ghcr.io/wustl-data/dev \
+          --config .github/container-structure-tests.yaml

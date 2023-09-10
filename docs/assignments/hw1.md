@@ -1,4 +1,4 @@
-# SQL vs Pandas Benchmarking
+# SQL & Pandas
 
 ## Introduction
 

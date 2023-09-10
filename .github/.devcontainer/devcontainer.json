@@ -2,9 +2,6 @@
 	"name": "CSE314A",
 	"image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
 	"features": {
-		"ghcr.io/devcontainers-contrib/features/mkdocs:2": {
-			"plugins": "mkdocs-material markdown-captions mkdocstrings[python] mkdocs-nav-weight"
-		},
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {},
 		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
 		"ghcr.io/devcontainers-contrib/features/ruff:1": {},
@@ -14,12 +11,12 @@
 	"mounts": [
 		{
 			"source": "vscode-extensions",
-			"target": "/root/.vscode-server/extensions",
+			"target": "/home/vscode/.vscode-server/extensions",
 			"type": "volume"
 		},
 		{
 			"source": "vscode-extensionsCache",
-			"target": "/root/.vscode-server/extensionsCache",
+			"target": "/home/vscode/.vscode-server/extensionsCache",
 			"type": "volume"
 		}
 	],

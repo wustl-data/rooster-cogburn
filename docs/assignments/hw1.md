@@ -36,10 +36,10 @@ Each question is worth 10 points each.
 
 We will use the [Faker](https://faker.readthedocs.io/en/master/) library to generate fake data for our benchmarking. Faker is a Python library that generates fake data for a variety of data types, including names, addresses, phone numbers, and more. It is useful for generating fake data for testing and benchmarking purposes.
 
-7. Write a test for a function `generate_people` that generates _n_ fake records for a "Person" table. This function should include columns for first name, last name, age, US State, and a random sentence.🔴
+7. (#7) Write a test for a function `generate_people` that generates _n_ fake records for a "Person" table. This function should include columns for first name, last name, age, US State, and a random sentence.🔴
 
-8. Implement this function using the [_faker_ library](https://faker.readthedocs.io/en/master/).🟢
+8. (# 8) Implement this function using the [_faker_ library](https://faker.readthedocs.io/en/master/).🟢
 
-~9. Write a test for a function `query_runtime` that uses `generate_people` to profile the query performance runtime of your functions as a function of n. The output of `query_runtime`should fit the data schema for the input of the provided `benchmark` function 🔴.~
+~~9. Write a test for a function `query_runtime` that uses `generate_people` to profile the query performance runtime of your functions as a function of n. The output of `query_runtime`should fit the data schema for the input of the provided `benchmark` function 🔴.~~
 
-10. Implement this function and observe the results from the provided `benchmark` function.
+~~10. Implement this function and observe the results from the provided `benchmark` function.~~

@@ -26,4 +26,3 @@ jobs:
         with:
           imageName: ghcr.io/wustl-data/dev
           cacheFrom: ghcr.io/wustl-data/dev
-          push: always

@@ -8,18 +8,6 @@
 		"ghcr.io/eitsupi/devcontainer-features/duckdb-cli:1": {},
 		"ghcr.io/devcontainers-contrib/features/black:2": {}
 	},
-	"mounts": [
-		{
-			"source": "vscode-extensions",
-			"target": "/home/vscode/.vscode-server/extensions",
-			"type": "volume"
-		},
-		{
-			"source": "vscode-extensionsCache",
-			"target": "/home/vscode/.vscode-server/extensionsCache",
-			"type": "volume"
-		}
-	],
 	"postCreateCommand": "poetry install && pre-commit install",
 	"runArgs": [
 		"--name",
@@ -37,7 +25,7 @@
 				"yzhang.markdown-all-in-one",
 				"eamodio.gitlens",
 				"Evidence.sqltools-duckdb-driver",
-                "github.vscode-github-actions"
+				"github.vscode-github-actions"
 			],
 			"settings": {
 				"yaml.schemas": {

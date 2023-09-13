@@ -22,6 +22,10 @@ Each question is worth 10 points each.
 
 1. Examine the provided test in `tests/test_hw1.py` and its Pandas implementation `filter_after_cutoff_age` that filters your generated dataset to include people who are 18 or older. Refactor the query to use SQL instead.🟢
 
+    !!! tip "DuckDB Parameters"
+
+        Use the [`?` syntax](http://duckdb.org/docs/archive/0.8.1/api/python/dbapi#querying).
+
 2. Now, examine the SQL query and test for `avg_age_per_state` that calculates the mean age of people for each state. Refactor the query to use Pandas instead.🟢
 
 3. Write a test for a function `large_states_adult_age` which will use the data in `data/state_populations.csv` to calculate the mean age of adults you generate in states with over 5 million people. Write the test such that this function takes the hypothetical output from `filter_after_cutoff_age` and `avg_age_per_state` as input parameters.🔴

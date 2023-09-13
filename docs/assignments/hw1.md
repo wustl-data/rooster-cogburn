@@ -24,7 +24,7 @@ Each question is worth 10 points each.
 
 2. Now, examine the SQL query and test for `avg_age_per_state` that calculates the mean age of people for each state. Refactor the query to use Pandas instead.🟢
 
-3. Write a test for a function `large_states_adult_age` which will use the data in `data/state_populations.csv` to calculate the mean age of adults in a generated dataset (see #7) for each state with over 5 million people. 🔴
+3. Write a test for a function `large_states_adult_age` which will use the data in `data/state_populations.csv` to calculate the mean age of adults in a generated dataset (see #7) for each state with over 5 million people. 🔴 (Assume the generated table is the input for the function.)
 
 4. First, implement this function in Pandas, performing the filter *after* the join.🟢
 

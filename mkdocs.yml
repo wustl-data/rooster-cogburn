@@ -1,8 +1,10 @@
 site_name: CSE314A - Data Manipulation and Management - FL23
+repo_url: https://github.com/wustl-data/fl23
 theme:
   name: material
   icon:
     logo: fontawesome/solid/hat-cowboy
+    repo: fontawesome/brands/github
   features:
   - content.code.copy
   - content.tabs.link

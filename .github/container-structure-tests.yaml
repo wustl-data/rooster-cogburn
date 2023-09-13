@@ -1,0 +1,7 @@
+schemaVersion: 2.0.0
+
+commandTests:
+  - name: "Poetry Installed"
+    command: "poetry"
+    args: ["--version"]
+    expectedOutput: ["1.*"]

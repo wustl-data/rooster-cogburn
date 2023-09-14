@@ -3,7 +3,7 @@ name: Semantic Release
 on:
   push:
     branches:
-      - release
+      - prerelease
 
 jobs:
   release:
@@ -22,3 +22,4 @@ jobs:
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: true

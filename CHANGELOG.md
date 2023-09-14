@@ -2,6 +2,15 @@
 
 
 
+## v0.0.1-rc.1 (2023-09-14)
+
+### Fix
+
+* fix(codespaces): give access to upstream repo ([`e5affac`](https://github.com/wustl-data/fl23/commit/e5affac4ab6b399b3d83e96ea4336394f39c8f69))
+
+* fix: add permissions for codespaces to access upstream ([`7b57956`](https://github.com/wustl-data/fl23/commit/7b579567a5a91cf1e97736e86eb880aa8decc457))
+
+
 ## v0.0.0 (2023-09-14)
 
 ### Ci

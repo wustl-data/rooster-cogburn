@@ -1,7 +1,7 @@
 name: Semantic Release
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
@@ -22,4 +22,3 @@ jobs:
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          commit: false

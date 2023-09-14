@@ -23,3 +23,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: true
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5

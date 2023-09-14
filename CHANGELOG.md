@@ -2,11 +2,44 @@
 
 
 
+## v0.0.1 (2023-09-14)
+
+### Ci
+
+* ci(release): no commit ([`a6e8157`](https://github.com/wustl-data/fl23/commit/a6e8157d4b15c981dfda7a97cc1a881645990da0))
+
+* ci(release): no push ([`aa5327e`](https://github.com/wustl-data/fl23/commit/aa5327e9c399534975d90bfba70c27a93428e8b8))
+
+* ci(release): run on pull request instead of push to main ([`526dd19`](https://github.com/wustl-data/fl23/commit/526dd19593c883ea578a94fed32638610fbaff97))
+
+* ci(prerelease): adjust labels for gh actions ([`02656b3`](https://github.com/wustl-data/fl23/commit/02656b3ebadf1dd6d79bd264db005378152461c7))
+
+### Unknown
+
+* Merge pull request #33 from wustl-data/prerelease
+
+Prerelease ([`f46ddaa`](https://github.com/wustl-data/fl23/commit/f46ddaaf60d0676e2035f22c1dcb48653e2422e3))
+
+* open PR in prerelease workflow ([`dfc1b98`](https://github.com/wustl-data/fl23/commit/dfc1b98b9f939471371a048fed4dbddac8abe778))
+
+* merge upstream ([`55ce3a1`](https://github.com/wustl-data/fl23/commit/55ce3a1001795b7d810cb9d44ba14b15d3a9b852))
+
+
 ## v0.0.1-rc.3 (2023-09-14)
+
+### Ci
+
+* ci(semantic-release): add release group for main release ([`eb8b01e`](https://github.com/wustl-data/fl23/commit/eb8b01efa71a006ba5c7d8daf1fb0922ccb9b1ad))
+
+* ci: add release step for main ([`1934574`](https://github.com/wustl-data/fl23/commit/193457439cd60891d281363996f1f3eb2c5b23bc))
 
 ### Fix
 
 * fix(devcontainer): watch devcontainer folders only for devcontainer build trigger ([`c52d323`](https://github.com/wustl-data/fl23/commit/c52d323fbd36f3fbfee4ac7d028635954757ea44))
+
+* fix(devcontainer): Add default settings for VS Code to run tests in GUI ([`20d2e60`](https://github.com/wustl-data/fl23/commit/20d2e6007ff2c8c1eb3f094afc523f4f6151c6e8))
+
+* fix: restore prerelease ([`94db790`](https://github.com/wustl-data/fl23/commit/94db79014c3e4330648a60650deae78f6821b947))
 
 ### Unknown
 

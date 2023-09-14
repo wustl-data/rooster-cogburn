@@ -2,6 +2,17 @@
 
 
 
+## v0.0.1-rc.3 (2023-09-14)
+
+### Fix
+
+* fix(devcontainer): watch devcontainer folders only for devcontainer build trigger ([`c52d323`](https://github.com/wustl-data/fl23/commit/c52d323fbd36f3fbfee4ac7d028635954757ea44))
+
+### Unknown
+
+* merge release changes ([`f9a4ca9`](https://github.com/wustl-data/fl23/commit/f9a4ca94f02f1433857c313910f8e132772db137))
+
+
 ## v0.0.1-rc.2 (2023-09-14)
 
 ### Ci
@@ -11,6 +22,8 @@
 ### Fix
 
 * fix: restore prerelease ([`9994871`](https://github.com/wustl-data/fl23/commit/99948714cc0c18663db7bbc095781494c7284cdc))
+
+* fix: add permissions for codespaces to access upstream ([`818eb7d`](https://github.com/wustl-data/fl23/commit/818eb7de21e873d26eaa2f119a9377410d82e5d8))
 
 ### Unknown
 

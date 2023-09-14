@@ -2,6 +2,21 @@
 
 
 
+## v0.0.1-rc.2 (2023-09-14)
+
+### Ci
+
+* ci: add release step for main ([`890e2bf`](https://github.com/wustl-data/fl23/commit/890e2bf3e3e4b10d20d330fcb8403f5f8d65c363))
+
+### Fix
+
+* fix: restore prerelease ([`9994871`](https://github.com/wustl-data/fl23/commit/99948714cc0c18663db7bbc095781494c7284cdc))
+
+### Unknown
+
+* Merge branch &#39;main&#39; into prerelease ([`0fcd4d3`](https://github.com/wustl-data/fl23/commit/0fcd4d331527c009d0ac3dff0181202678e30a59))
+
+
 ## v0.0.1-rc.1 (2023-09-14)
 
 ### Fix
@@ -9,6 +24,12 @@
 * fix(codespaces): give access to upstream repo ([`e5affac`](https://github.com/wustl-data/fl23/commit/e5affac4ab6b399b3d83e96ea4336394f39c8f69))
 
 * fix: add permissions for codespaces to access upstream ([`7b57956`](https://github.com/wustl-data/fl23/commit/7b579567a5a91cf1e97736e86eb880aa8decc457))
+
+### Unknown
+
+* Merge pull request #29 from wustl-data/prerelease
+
+0.0.0 ([`6c74c6e`](https://github.com/wustl-data/fl23/commit/6c74c6e01e5a17c216263198109e57897d6d09a9))
 
 
 ## v0.0.0 (2023-09-14)

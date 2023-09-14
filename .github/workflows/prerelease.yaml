@@ -6,7 +6,7 @@ on:
       - prerelease
 
 jobs:
-  release:
+  prelease:
     runs-on: ubuntu-latest
     concurrency: release
     permissions:
@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Python Semantic Release
+      - name: Python Semantic Release (prerelease)
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

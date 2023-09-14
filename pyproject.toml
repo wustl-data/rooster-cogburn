@@ -47,4 +47,5 @@ convention = "google"
 version_toml = ["pyproject.toml:tool.poetry.version"]
 
 [tool.semantic_release.branches.prerelease]
+match = "prerelease"
 prerelease = true

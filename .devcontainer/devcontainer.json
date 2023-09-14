@@ -1,6 +1,15 @@
 {
 	"image": "ghcr.io/wustl-data/dev",
 	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.testing.pytestArgs": [
+					"tests"
+				],
+				"python.testing.unittestEnabled": false,
+				"python.testing.pytestEnabled": true
+			}
+		},
 		"codespaces": {
 			"repositories": {
 				"wustl-data/fl23": {

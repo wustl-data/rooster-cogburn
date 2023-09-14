@@ -45,3 +45,6 @@ convention = "google"
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:tool.poetry.version"]
+
+[tool.semantic_release.branches.prerelease]
+prerelease = true

@@ -2,7 +2,7 @@
 
 
 
-## v1.0.0 (2023-09-12)
+## v0.0.0 (2023-09-14)
 
 ### Ci
 
@@ -55,6 +55,32 @@
 * docs: update outdated links ([`6800f4d`](https://github.com/wustl-data/fl23/commit/6800f4d27076bfcec13b3392efedbff6e3367d3a))
 
 ### Unknown
+
+* add match pattern ([`2542072`](https://github.com/wustl-data/fl23/commit/25420723234e3fb3ef72c4646aca2b4e912cd085))
+
+* add prerelease release group in config ([`5aec1ea`](https://github.com/wustl-data/fl23/commit/5aec1ea5e6d93d2ece7ef1c7332da51d56fe9f9b))
+
+* use prerelease instead of release per docs ([`df47979`](https://github.com/wustl-data/fl23/commit/df47979eb42b3554078e1f1b0047914f7b71aef7))
+
+* release from release branch ([`c840e37`](https://github.com/wustl-data/fl23/commit/c840e378831bcf539cad210d36d98e4a887bedef))
+
+* fix typo - main branch ([`9a8ec27`](https://github.com/wustl-data/fl23/commit/9a8ec27deecf435d25990ff78d7a4184c39767ec))
+
+* add semantic-release ([`9e27cff`](https://github.com/wustl-data/fl23/commit/9e27cff4e39fa6df8fc7a6fc9b69aca6dcb2d752))
+
+* Merge branch &#39;main&#39; of https://github.com/wustl-data/fl23 ([`8a6db67`](https://github.com/wustl-data/fl23/commit/8a6db6751b4c091d5a920e4b0f40eeb8d45c30b7))
+
+* tip for duckdb parameters ([`67d5d3d`](https://github.com/wustl-data/fl23/commit/67d5d3db25b61add8884a32831ce099590118a6b))
+
+* fix slides ([`63381c0`](https://github.com/wustl-data/fl23/commit/63381c0d8e28433e7b621b4f68556a1697f9af7f))
+
+* clarify gen data is input ([`35b1765`](https://github.com/wustl-data/fl23/commit/35b1765f1a19703661827e90762de60253523930))
+
+* clarify generated dataset ([`437df2a`](https://github.com/wustl-data/fl23/commit/437df2a0c5680b2d6f3b649e354c73f2b0db68e9))
+
+* upload sql vs pandas slides ([`1fdc19c`](https://github.com/wustl-data/fl23/commit/1fdc19c471d40208b4373572a405a2e77081e867))
+
+* add pandas v sql slides ([`95aaac0`](https://github.com/wustl-data/fl23/commit/95aaac06e87880a73ced0210c65c8e76383ef31b))
 
 * install semantic versioning ([`2ed7602`](https://github.com/wustl-data/fl23/commit/2ed760206127343d35f7cc0249522e9d1983cc06))
 

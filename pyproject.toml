@@ -22,3 +22,26 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+fix = true
+select = ["ALL"]
+ignore = ["D100", "D104"]
+per-file-ignores = { "tests/**/*.py" = [
+    "S101",
+    "D100",
+    "D103",
+    "ANN201",
+    "ANN001",
+    "INP001",
+] }
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:tool.poetry.version"]

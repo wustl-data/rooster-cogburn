@@ -1,3 +1,14 @@
 {
-	"image": "ghcr.io/wustl-data/dev"
+	"image": "ghcr.io/wustl-data/dev",
+	"customizations": {
+		"codespaces": {
+			"repositories": {
+				"wustl-data/fl23": {
+					"permissions": {
+						"contents": "read"
+					}
+				}
+			}
+		}
+	}
 }

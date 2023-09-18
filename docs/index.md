@@ -21,9 +21,10 @@ Professor (virtual): Fridays 12PM
 Zoom link posted on Canvas
 
 TAs:
-  - Lavinia: Mondays 2:30-3:30 PM
-  - Siming: Tuesdays 2:30-3:30 PM
-  - Levi: Wednesdays 4-5 PM
+
+- Lavinia: Mondays 2:30-3:30 PM, Urbauer 214
+- Siming: Tuesdays 2:30-3:30 PM, McKelvey 3037
+- Levi: Wednesdays 4-5 PM, McKelvey 2037
 
 Locations coming soon
 

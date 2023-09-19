@@ -1,87 +1,18 @@
-# Course Repository
+# In-class Exercise 9/19/23
 
-CSE314A - Data Manipulation and Management
+Normalize the following tables using *Pandas* as described in the Tidy Data paper.
 
-Fall 2023
+Use `pd.read_csv` to read CSV URLs directly.
 
-## Updating your repo
+[Pew Research data](https://github.com/ditirodt/Tidy-data/blob/master/pew.csv)
+[Billboard data](https://github.com/chendaniely/pydatadc_2018-tidy/blob/master/data/billboard.csv).
 
-### Check your remotes
+Notebook submissions are OK for this exercise.
 
-Before attempting any updates, make sure the `upstream` repository is registered as a remote in your local environment:
+1. (Demo) - Turn the Pew Research dataset from wide to long.
 
-1. List your remotes:
+2. Turn the Billboard dataset from wide into long.
 
-    ```bash
-    git remote
-    ```
+3. Split the dataset into two normalized tables, `songs` and `ratings`.
 
-2. If `upstream` is not in your list of remotes, add it:
-
-    ```bash
-    git remote add upstream https://github.com/wustl-data/fl23
-    ```
-
-### New branches
-
-To update your repo with a newly posted branch:
-
-1. Fetch the branches from `upstream`:
-
-    ```bash
-    git fetch upstream
-    ```
-
-2. Pull and switch to the new branch, marking `upstream` as its remote tracking branch.
-
-    ```bash
-    git switch -t upstream/hw*-upstream
-    ```
-
-3. Create and switch to your submission branch:
-
-    ```bash
-    git switch -c hw*
-    ```
-
-4. Push your submission branch to your private repo, marking `origin` as its remote tracking branch.
-
-    ```bash
-    git push -u origin hw*
-    ```
-
-### Updates to existing branches
-
-To update your repo with updates to a branch:
-
-1. Fetch the branches from `upstream`:
-
-    ```bash
-    git fetch upstream
-    ```
-
-2. Switch to your hw*-upstream branch:
-
-    ```bash
-    git switch hw*-upstream
-    ```
-
-3. Pull the updates from `upstream`:
-
-    ```bash
-    git pull
-    ```
-
-    > The updates should be pulled without merge conflicts. If you have merge conflicts, you may try to resolve them or reset this branch to an earlier commit, making sure your most recent work is on your `hw*` branch.
-
-4. Switch to your submission branch:
-
-    ```bash
-    git switch hw*
-    ```
-
-5. Merge the updates from `hw*-upstream` into your submission branch, resolving any merge conflicts:
-
-    ```bash
-    git merge hw*-upstream
-    ```
+When you are done, submit your assignment on Canvas as a URL to this branch.

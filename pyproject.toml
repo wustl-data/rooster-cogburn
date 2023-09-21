@@ -10,6 +10,9 @@ python = "^3.11"
 pytest = "^7.4.0"
 markdown-captions = "^2.1.2"
 python-semantic-release = "^8.0.8"
+pandas = "^2.1.0"
+plotly = "^5.17.0"
+nbformat = "^5.9.2"
 
 
 [tool.poetry.group.dev.dependencies]

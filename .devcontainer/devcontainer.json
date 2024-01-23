@@ -14,15 +14,6 @@
 				"python.testing.pytestEnabled": true,
 				"gitlens.showWelcomeOnInstall": false
 			}
-		},
-		"codespaces": {
-			"repositories": {
-				"wustl-data/fl23": {
-					"permissions": {
-						"contents": "read"
-					}
-				}
-			}
 		}
 	}
 }

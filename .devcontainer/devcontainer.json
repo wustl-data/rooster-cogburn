@@ -1,5 +1,5 @@
 {
-	"image": "ghcr.io/wustl-data/dev",
+	"image": "mcr.microsoft.com/devcontainers/python",
 	"customizations": {
 		"vscode": {
 			"extensions": [
